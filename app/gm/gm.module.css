@@ -35,7 +35,6 @@
   justify-content: left;
   list-style-type: none;
   gap: 16px;
-  text-decoration: underline;
 }
 
 .description a {
@@ -43,6 +42,7 @@
   justify-content: left;
   align-items: center;
   font-size: 18px;
+  text-decoration: underline;
 }
 
 .description a:hover {

@@ -1,10 +1,11 @@
-import styles from './references.module.css'
 
-export default function Reference() {
+import styles from './gm.module.css'
+
+export default function GameMaster() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        references page placeholder
+        gm page placeholder
         <a href='/'>back</a>
       </div>
     </main>

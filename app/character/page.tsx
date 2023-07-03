@@ -6,7 +6,7 @@ export default function Character() {
     <main className={styles.main}>
       <div className={styles.description}>
         character page placeholder
-        <a href='/character/builer'>what dis</a>
+        <a href='/character/builder'>what dis</a>
         <a href='/'>back</a>
       </div>
     </main>

@@ -6,7 +6,7 @@ export default function App() {
     <main className={styles.main}>
       <div className={styles.description}>
         <h1 className={styles.title}>Radiant Moon TTRPG</h1>
-        <div >Personal TTRPG Character Management</div>
+        <div >Personal Tabletop Character Management</div>
         <div className={styles['sub-title']}>
           <i>
             Currently limited to D&D 5e - hoping to expand to include some other indie ttrpgs

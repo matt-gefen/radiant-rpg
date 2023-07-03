@@ -7,6 +7,16 @@
   min-height: 100vh;
 }
 
+.title {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 25px;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -23,6 +33,10 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+.description a:hover {
+  color: #F7DD72;
 }
 
 .description p {

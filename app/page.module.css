@@ -28,6 +28,11 @@
   font-family: var(--font-fira-sans);
 }
 
+.sub-title {
+  font-size: 16px;
+  
+}
+
 .landing-links {
   display: flex;
   flex-direction: column;

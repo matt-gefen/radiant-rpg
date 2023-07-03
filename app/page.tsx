@@ -7,7 +7,11 @@ export default function App() {
       <div className={styles.description}>
         <h1 className={styles.title}>Radiant Moon TTRPG</h1>
         <div >Personal TTRPG Character Management</div>
-        <div>Currently limited to D&D 5e - hoping to expand to include some other indie ttrpgs</div>
+        <div className={styles['sub-title']}>
+          <i>
+            Currently limited to D&D 5e - hoping to expand to include some other indie ttrpgs
+          </i>
+        </div>
         <ul className={styles['landing-links']}>
           <li>
             <a href="/references">Reference</a>

@@ -28,7 +28,7 @@
   font-family: var(--font-fira-sans);
 }
 
-.landing-links {
+.character-links {
   display: flex;
   flex-direction: column;
   margin-top: 20px;

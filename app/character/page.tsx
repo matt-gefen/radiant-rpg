@@ -5,9 +5,15 @@ export default function Character() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        character page placeholder
-        <a href='/character/builder'>what dis</a>
-        <a href='/'>back</a>
+        <div className={styles.title}>Character Toolbox</div>
+        <ul className={styles['character-links']}>
+          <li>
+            <a href="/character/builder">Create Character</a>
+          </li>
+          <li>
+            <a href="/">Back Home</a>
+          </li>
+        </ul>
       </div>
     </main>
   )

@@ -1,3 +1,12 @@
+
+Radiant TTRPG is a free, non-commercial application built primarily as a personal tool and learning project. All data is sourced from
+
+🐉 D&D 5e: 
+- https://5e.tools/
+
+
+
+--------
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

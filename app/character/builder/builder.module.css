@@ -16,6 +16,13 @@
   width: 100%;
   font-family: var(--font-fira-sans);
 }
+.subtitle {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
 .description {
   display: flex;
   flex-direction: column;
@@ -47,4 +54,11 @@
 
 .description a:hover {
   color: #F7DD72;
+}
+
+.character-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
 }

@@ -37,7 +37,11 @@ export default function FifthEditionCharacterBuilder() {
                   <input type="text" />
                 </div>
               </div>
-              <RacesModal />
+              {
+                raceModalOpen && (
+                  <RacesModal setRaceModalOpen={setRaceModalOpen}/>
+                )
+              }
             </div>
           )
         }

@@ -1,5 +1,6 @@
 .race-modal {
   display: flex;
+  flex-direction: column;
   position: absolute;
   width: 80%;
   height: 80%;
@@ -7,4 +8,52 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding: 15px;
+}
+.races-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: auto;
+}
+.races-table-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: auto;
+  width: 50%;
+  padding-right: 20px;
+  color: black;
+  scrollbar-color: grey;
+}
+
+.race-info-section {
+  width: 50%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: fit-content;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.modal-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
 }

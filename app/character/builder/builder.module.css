@@ -62,3 +62,7 @@
   gap: 10px;
   margin-bottom: 12px;
 }
+
+.character-fields button {
+  width: 30%;
+}

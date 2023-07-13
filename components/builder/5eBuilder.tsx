@@ -30,7 +30,9 @@ export default function FifthEditionCharacterBuilder() {
                 </div>
                 <div className={styles['character-fields']}>
                   <label>Class</label>
-                  <input type="text" />
+                  {/* <button onClick={() => {setRaceModalOpen(true)}}>Select</button> */}
+                  <button >Select</button>
+                  <input type="text"  style={{display: 'none'}}/>
                 </div>
                 <div className={styles['character-fields']}>
                   <label>Age</label>

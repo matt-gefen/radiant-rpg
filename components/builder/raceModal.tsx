@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './raceModal.module.css'
 import races from '../../data/5e_tools_data/races.json'
 
@@ -18,9 +18,37 @@ const RacesModal = ({
     return acceptedSources.includes(o.source) && o.name !== 'Custom Lineage'
   })
 
-  console.log('races',races)
+  const ref = useRef()
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e: any) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        setRaceModalOpen(false);
+      }
+    }
+    document.addEventListener("click", checkIfClickedOutside)
+    return () => {
+      document.removeEventListener("click", checkIfClickedOutside)
+    }
+    
+  }, [setRaceModalOpen])
+
+  useEffect(() => {
+    const handleEsc = (e: any) => {
+      if (e.key === 'Escape') {
+        setRaceModalOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+    
+  }, [setRaceModalOpen])
+
   return (
-    <div className={styles['race-modal']}>
+    <div className={styles['race-modal']} ref={ref}>
       <div className={styles['races-content']}>
         <div className={styles['races-table-wrapper']}>
         <div className={styles['modal-column']}>

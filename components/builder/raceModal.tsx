@@ -9,10 +9,23 @@ interface Props {
   setRaceModalOpen: (bool: any) => void,
 }
 
+interface IRace {
+  name: String,
+  source: String,
+  page: Number,
+  size: string[],
+  speed: {} | string,
+  ability: {}[] | undefined,
+  entries: {}[],
+  languageProficiencies: {}[],
+  traitTags: {}[]
+}
+
 const RacesModal = ({
   setRaceModalOpen,
 }: Props) => {
   const [progress, setProgress] = useState(0);
+  const [selectedRace, setSelectedRace] = useState<IRace>({});
   const acceptedSources = ['VGM', 'DMG', 'PHB', 'SCAG', 'TCE', 'MOT', 'MPMM', 'VRGR']
   const filteredRaces = filter(races.race, function(o) {
     return acceptedSources.includes(o.source) && o.name !== 'Custom Lineage'
@@ -58,7 +71,15 @@ const RacesModal = ({
           {
             map(filteredRaces, (race, index)=>(
               <div key={`race-${index}`} className={styles['modal-row']}>
-                <div>{race.name}</div>
+                <button 
+                  className={styles.race}
+                  onClick={()=>{
+                    console.log(race)
+                    setSelectedRace(race)
+                  }}
+                >
+                    {race.name}
+                </button>
               </div>
             ))
           }
@@ -79,7 +100,29 @@ const RacesModal = ({
         </div>
         </div>
         <div className={styles['race-info-section']}>
-          INFORMATION AND SELECT HERE
+          {Object.keys(selectedRace).length > 0 && (
+            <>
+              <div>{selectedRace.name}</div>
+              <div>
+                <div>Character Traits</div>
+                {
+                  map(selectedRace.entries, (entry, index)=>(
+                    <>
+                      { entry.name !== undefined && (
+                        <div key={`selected-entries-${index}`}>
+                        <div>{entry.name}</div>
+                        <div>{entry.entries[0]}</div>
+                      </div>
+                      )}
+                    </>
+                  ))
+          }
+              </div>
+            </>
+          )}
+          {Object.keys(selectedRace).length === 0 && (
+            <div>No Character Race Selected</div>
+          )}
         </div>
       </div>
       <button

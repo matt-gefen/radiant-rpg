@@ -57,3 +57,7 @@
   justify-content: space-between;
   gap: 10px;
 }
+
+.race:hover {
+  text-decoration: underline;
+}
